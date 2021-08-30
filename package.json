@@ -1,0 +1,23 @@
+{
+  "name": "edge-chatbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@signalwire/node": "^2.3.4",
+    "base-64": "^1.0.0",
+    "dotenv": "^8.6.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "faye": "^1.4.0",
+    "node-fetch": "^2.6.1",
+    "node-nlp": "^4.22.1",
+    "uuidv4": "^6.2.12"
+  }
+}
