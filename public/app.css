@@ -1,0 +1,14 @@
+.netStats {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.botResult {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+#stats, #output {
+  height: 500px;
+  overflow: scroll;
+}
