@@ -123,6 +123,9 @@ function handleCallUpdate(call) {
   * Make a new outbound call
 */
 function makeCall() {
+  clearElementbyId('output');
+  clearElementbyId('stats');
+  
   _timer = performance.now();
   var destination = uuid + '@' + app;
   console.log('Calling ', destination);
@@ -179,7 +182,7 @@ async function toggleStats() {
           elm.appendChild(line);
         })
 
-        document.getElementById('stats').appendChild(elm);
+        document.getElementById('stats').prepend(elm);
       }
     })
     
@@ -195,6 +198,10 @@ function reportTimerStat(title, stat) {
   elm.appendChild(bodyElm);
 
   document.getElementById('stats').appendChild(elm);
+}
+
+function clearElementbyId(id) {
+  document.getElementById(id).innerHTML = "";
 }
 
 // jQuery document.ready equivalent
