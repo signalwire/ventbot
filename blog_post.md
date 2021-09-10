@@ -2,11 +2,13 @@
 
 Edge computing is a distributed system paradigm that involves deploying applications closer to their final users to improve latency and save bandwidth. The 5G networks across the world, with their enhanced computing resources, enable an entire class of applications that were not feasible before, and make the user experience incomparably better.
 
+For example, your application might be using features such as machine learning or computer vision backed by server-side services, or simply be a situation where latency and quality of service are important. Some examples could be a VR gaming experience, or a low-latency sports and betting room with live feeds.
+
 In this post, we will explore a prototype built by [SignalWire](https://signalwire.com) and deployed on the [AWS Wavelength](https://aws.amazon.com/wavelength/) network, powered by Verizon. Our goal will be to build and deploy a chatbot that uses natural language processing to listen to users and reassure them.
 
 ## What is AWS Wavelength?
 
-Even 5G networks of today, which are up to 20 times faster than 4G, an application running on a mobile device incurs a latency of at least 100ms due to the many hops data has to travel through, in addition to normal overhead.
+Even on 5G networks of today, which are up to 20 times faster than 4G, an application running on a mobile device incurs a latency of at least 100ms due to the many hops data has to travel through, in addition to normal overhead.
 
 Features such as natural language processing and other machine learning require the lowest possible latency to feel natural and available, and studies have shown that quick activation and response times are the most important characteristic an user looks for.
 
