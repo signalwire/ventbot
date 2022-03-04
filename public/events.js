@@ -52,6 +52,7 @@
 
 var client = new Faye.Client('/faye');
 client.disable('long-polling');
+client.disable('callback-polling ');
 
 console.log('/updates/' + uuid)
 var subscription = client.subscribe('/updates/' + uuid, function(message) {
