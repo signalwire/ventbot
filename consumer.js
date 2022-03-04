@@ -21,6 +21,7 @@ const sendUpdate = async (uuid, msg) => {
   }
 
   request.body = JSON.stringify(payload)
+  console.log('updating', process.env.UPDATES_URL, payload)
   const response = await fetch(process.env.UPDATES_URL, request);
 }
 
@@ -40,7 +41,7 @@ const consumer = new RelayConsumer({
   onIncomingCall: async (call) => {
     await call.answer()
 
-    var uuid = call.device.params.to.split('@')[0];
+    var uuid = call.device.params.to.split('@')[0].replace('sip:', '');
     var prompt = 'Welcome. How can I help you today?';
 
 
@@ -64,7 +65,6 @@ const consumer = new RelayConsumer({
             entities: result.entities.map(ent => ent.option),
             sentiment: result.sentiment.vote
           }
-          console.log('before update')
 
           await sendUpdate(uuid, update);
 
